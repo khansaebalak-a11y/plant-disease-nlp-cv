@@ -1,0 +1,7 @@
+modèle,jeu de test,précision,F1 macro
+resnet50,PlantVillage test,0.979,0.98
+resnet50,PlantDoc test,0.311,0.26
+resnet50,PlantDoc toutes,0.228,0.192
+vit_b_16,PlantVillage test,0.973,0.975
+vit_b_16,PlantDoc test,0.298,0.222
+vit_b_16,PlantDoc toutes,0.222,0.175
