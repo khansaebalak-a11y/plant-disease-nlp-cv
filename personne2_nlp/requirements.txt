@@ -1,0 +1,7 @@
+sentence-transformers
+chromadb
+pandas
+pyyaml
+matplotlib
+jupyter
+ipykernel
