@@ -39,9 +39,9 @@ flowchart LR
 
 | Personne | Rôle | Contenu |
 |---|---|---|
-| **Personne 1** : [NOM] | 👁️ Vision (CV) | Données images, nettoyage, ResNet50 et ViT, Grad-CAM, test de généralisation |
-| **Personne 2** : [NOM] | 💬 NLP (RAG) | Base de connaissances, embeddings, génération avec sources, questions de test |
-| **Personne 3** : [NOM] | 🔗 Intégration | Pipeline, seuil de confiance, démo, évaluation de bout en bout, rapport |
+| **Personne 1** : Khanssae balakrafss | 👁️ Vision (CV) | Données images, nettoyage, ResNet50 et ViT, Grad-CAM, test de généralisation |
+| **Personne 2** : Wijdane Bassiry| 💬 NLP (RAG) | Base de connaissances, embeddings, génération avec sources, questions de test |
+| **Personne 3** : Soukaina Grandi | 🔗 Intégration | Pipeline, seuil de confiance, démo, évaluation de bout en bout, rapport |
 
 ## 📁 Contenu du dépôt
 
