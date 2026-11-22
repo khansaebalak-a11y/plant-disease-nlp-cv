@@ -1,0 +1,6 @@
+# .gitignore
+data/chroma/
+.env
+__pycache__/
+venv/
+*.pt

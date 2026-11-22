@@ -129,7 +129,9 @@ def answer(maladie, question, k=6):
             "reponse": "Je n'ai pas encore de documents pour cette maladie.",
             "sources": [],
         }
-    contexte = "\n\n---\n\n".join(texte for texte, _, _ in passages)
+    contexte = "\n\n---\n\n".join(
+        f"[Source : {meta['source']}]\n{texte}" for texte, meta, _ in passages
+    )
     client = Groq(api_key=os.environ["GROQ_API_KEY"])
     r = client.chat.completions.create(
         model=MODELE_LLM,
@@ -144,6 +146,16 @@ def answer(maladie, question, k=6):
     )
     sources = sorted({meta["url"] for _, meta, _ in passages})
     return {"reponse": r.choices[0].message.content, "sources": sources}
+
+
+def classe_vers_fiche(classe_modele):
+    df = pd.read_csv("data/correspondance.csv")
+    ligne = df[df.classe_modele == classe_modele]
+    return None if ligne.empty else ligne.iloc[0].fiche_kb
+
+def repondre_depuis_classe(classe_modele, question):
+    """Pont CV -> NLP : prend la sortie de predict()."""
+    return answer(classe_vers_fiche(classe_modele), question)
 
 if __name__ == "__main__":
     if len(sys.argv) >= 2 and sys.argv[1] == "construire":
