@@ -1,7 +1,11 @@
+# requirements.txt
 sentence-transformers
 chromadb
+groq
 pandas
 pyyaml
 matplotlib
+scikit-learn
+spacy
 jupyter
 ipykernel
