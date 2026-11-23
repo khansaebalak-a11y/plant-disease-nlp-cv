@@ -2,5 +2,5 @@
 data/chroma/
 .env
 __pycache__/
-venv/
+.venv/
 *.pt
